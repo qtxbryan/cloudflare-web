@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/*.pyc
+
+# Env files / secrets
+backend/.env
+frontend/.env.local
+.env
+
+# Node / frontend build output
+frontend/node_modules/
+frontend/dist/
+
+# AI Skills
+.claude/
+*/.openclaude/

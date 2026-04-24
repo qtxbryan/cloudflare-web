@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #FF6633;
+  --color-brand-orange-dim: #E07318;
+  --color-bg-app: #131314;
+  --color-surface-mid: #201f20;
+  --color-surface-high: #2a2a2b;
+  --color-text-primary: #e5e2e3;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(40, 40, 41, 0.2);
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-input {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mesh-gradient {
+    background-color: #131314;
+    background-image:
+      radial-gradient(at 10% 20%, rgba(255, 102, 51, 0.15) 0px, transparent 50%),
+      radial-gradient(at 90% 80%, rgba(100, 50, 150, 0.15) 0px, transparent 50%);
+  }
+
+  .portal-gradient {
+    background-color: #000000;
+    background-image: radial-gradient(circle at 100% 0%, rgba(255, 102, 51, 0.15) 0%, transparent 40%);
+  }
+
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #FF6633 0%, #ffb59e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-gradient-heading {
+    background: linear-gradient(
+      135deg,
+      #ff2d00 0%,
+      #ff6633 28%,
+      #ff8c00 55%,
+      #ffb347 78%,
+      #ffd700 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .badge-glow {
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.4);
+  }
+
+  .button-glow {
+    box-shadow: 0 0 16px rgba(255, 102, 51, 0.4);
+  }
+
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
