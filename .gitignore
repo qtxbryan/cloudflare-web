@@ -5,6 +5,7 @@
 backend/.venv/
 backend/__pycache__/
 backend/*.pyc
+backend/dist/
 
 # Env files / secrets
 backend/.env
