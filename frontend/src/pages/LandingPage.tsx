@@ -1,5 +1,4 @@
 import { useState, type FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion, type Variants } from 'motion/react';
 import { Button } from '../components/ui/Button';
 import { GradientText } from '../components/ui/GradientText';
@@ -29,13 +28,12 @@ const itemVariants: Variants = {
 };
 
 export function LandingPage() {
-  const navigate = useNavigate();
   const [password, setPassword] = useState('');
   const [rememberDevice, setRememberDevice] = useState(false);
 
   const handleAuthenticate = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    void navigate('/secure');
+    window.location.href = '/secure';
   };
 
   return (
